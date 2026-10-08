@@ -1,0 +1,43 @@
+{
+  "name": "@smmahmudiqbal/gwei-weather",
+  "version": "1.0.0",
+  "description": "Retro ASCII Web3 Gas & Chain Weather CLI - Developed by S. M. Mahmud Iqbal",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "gwei-weather": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "node --test test/index.test.js"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMMahmudIqbal/gwei-weather.git"
+  },
+  "homepage": "https://github.com/SMMahmudIqbal/gwei-weather#readme",
+  "bugs": {
+    "url": "https://github.com/SMMahmudIqbal/gwei-weather/issues"
+  },
+  "author": "S. M. Mahmud Iqbal",
+  "license": "MIT",
+  "keywords": [
+    "ethereum",
+    "web3",
+    "gas",
+    "gwei",
+    "cli",
+    "ascii",
+    "weather",
+    "crypto",
+    "polygon",
+    "arbitrum",
+    "base"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
