@@ -1,6 +1,6 @@
-# ⚡ gwei-weather
+# gwei-weather
 
-> **Retro ASCII Web3 Gas & Chain Weather CLI & Library**  
+> **Retro ASCII Web3 Gas and Chain Weather CLI & Library**  
 > *Developed by S. M. Mahmud Iqbal*
 
 [![Test](https://github.com/SMMahmudIqbal/gwei-weather/actions/workflows/test.yml/badge.svg)](https://github.com/SMMahmudIqbal/gwei-weather/actions/workflows/test.yml)
@@ -8,25 +8,23 @@
 [![GitHub Packages](https://img.shields.io/badge/Registry-GitHub%20Packages-blue)](https://github.com/SMMahmudIqbal?tab=packages)
 [![Author](https://img.shields.io/badge/Author-S.%20M.%20Mahmud%20Iqbal-green)](https://github.com/SMMahmudIqbal)
 
-`gwei-weather` transforms real-time blockchain gas prices into an animated retro **Weather Forecast** directly in your terminal. 
-
-Check if on-chain skies are clear for deploying contracts or if a Category 5 gas hurricane is brewing before you submit a transaction!
+`gwei-weather` transforms real-time blockchain gas prices into an animated retro weather forecast directly in your terminal. Check whether on-chain conditions are clear for deploying contracts or if elevated gas fees are occurring before submitting transactions.
 
 ---
 
-## 📸 Preview
+## Terminal Preview
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
-│  ⚡ GWEI WEATHER STATION • ETHEREUM MAINNET                 │
+│  GWEI WEATHER STATION • ETHEREUM MAINNET                    │
 ├─────────────────────────────────────────────────────────────┤
-│      \   /           ☀️ Clear Skies & Gentle Breeze
-│       .-.            Temperature (Gas): 0.128 Gwei (ETH)
-│    ― (   ) ―         Mempool Congestion: Low (~8%)
-│       `-'            Tip Velocity:       Calm (< 0.05 Gwei tip)
-│      /   \           Observed at:        11:21:32 AM
+│      \   /           Clear Skies & Gentle Breeze            │
+│       .-.            Temperature (Gas): 0.128 Gwei (ETH)    │
+│    ― (   ) ―         Mempool Congestion: Low (~8%)          │
+│       `-'            Tip Velocity:       Calm (< 0.05 Gwei) │
+│      /   \           Observed at:        11:21:32 AM        │
 ├─────────────────────────────────────────────────────────────┤
-│  ADVISORY: Optimal weather! Gas is practically free. Safe to deploy contracts, mint NFTs, and execute complex swaps.
+│  ADVISORY: Optimal weather. Low network gas conditions.     │
 ├─────────────────────────────────────────────────────────────┤
 │  Source: https://ethereum-rpc.publicnode.com                │
 │  Developed by S. M. Mahmud Iqbal • @smmahmudiqbal           │
@@ -35,18 +33,18 @@ Check if on-chain skies are clear for deploying contracts or if a Category 5 gas
 
 ---
 
-## ✨ Features
+## Features
 
-- 🌤️ **Retro ANSI Weather Visuals:** Dynamic ASCII art for Clear Skies, Partly Cloudy, Fee Showers, Thunderstorms, and Category 5 Hurricanes.
-- ⛓️ **Multi-Chain Support:** Ethereum, Polygon (POL), Base, Arbitrum One, and Optimism.
-- 📡 **Zero API Keys Required:** Powered by high-speed public JSON-RPC nodes with automatic multi-endpoint failover.
-- 🖥️ **Terminal Integrations:** Compact mode for tmux, Starship prompt, or shell status bars.
-- 📡 **Live Radar Mode:** `--watch` refreshes every 5 seconds for live on-chain monitoring.
-- 📦 **JavaScript / TypeScript API:** Can be imported and used inside any Node.js or web app.
+- **Retro ANSI Weather Visuals**: Dynamic ASCII renderings for Clear Skies, Partly Cloudy, Fee Showers, Thunderstorms, and Category 5 Gas Storms.
+- **Multi-Chain Support**: Ethereum, Polygon (POL), Base, Arbitrum One, and Optimism.
+- **Zero API Keys Required**: Driven by high-speed public JSON-RPC nodes with automatic multi-endpoint failover.
+- **Terminal Integrations**: Compact mode formatted for tmux, Starship prompt, or shell status bars.
+- **Live Radar Mode**: Optional `--watch` flag refreshing every 5 seconds for live on-chain monitoring.
+- **JavaScript & TypeScript API**: Available as an importable module for Node.js backends and web applications.
 
 ---
 
-## 🚀 Quick Run (No Install)
+## Quick Run
 
 Run immediately with `npx`:
 
@@ -67,13 +65,13 @@ npx @smmahmudiqbal/gwei-weather --compact
 
 ---
 
-## 🛠️ CLI Options
+## CLI Options
 
 | Flag | Alias | Description |
 | :--- | :--- | :--- |
 | `--chain <name>` | `-c` | Target chain (`ethereum`, `polygon`, `base`, `arbitrum`, `optimism`) |
 | `--all` | `-a` | Show weather radar for all supported chains |
-| `--compact` | `-s` | Output a single-line summary (e.g. `☀️ ETH: 0.128 Gwei (sunny)`) |
+| `--compact` | `-s` | Output a single-line summary (e.g. `ETH: 0.128 Gwei (sunny)`) |
 | `--watch` | `-w` | Live updating radar mode (updates every 5s) |
 | `--json` | `-j` | Output raw data in JSON format for scripting |
 | `--help` | `-h` | Display help screen |
@@ -81,18 +79,18 @@ npx @smmahmudiqbal/gwei-weather --compact
 
 ---
 
-## 💻 Programmatic Usage
+## Programmatic Usage
 
-You can also use `gwei-weather` as an npm module in your own project:
+You can also use `gwei-weather` as an npm module:
 
 ```javascript
 import { getGasWeather, getAllChainsWeather } from '@smmahmudiqbal/gwei-weather';
 
 // Fetch single chain weather
 const weather = await getGasWeather('ethereum');
-console.log(weather.condition.headline); // '☀️ Clear Skies & Gentle Breeze'
+console.log(weather.condition.headline); // 'Clear Skies & Gentle Breeze'
 console.log(weather.gasInfo.gwei);       // 0.128
-console.log(weather.compact);            // '☀️ ETH: 0.128 Gwei (sunny)'
+console.log(weather.compact);            // 'ETH: 0.128 Gwei (sunny)'
 
 // Fetch all chains
 const all = await getAllChainsWeather();
@@ -101,19 +99,18 @@ console.log(all);
 
 ---
 
-## 📦 Publishing to GitHub Packages
+## GitHub Packages Integration
 
-This repository is pre-configured with a GitHub Actions workflow (`.github/workflows/publish.yml`).
+This repository is pre-configured with a continuous integration workflow (`.github/workflows/publish.yml`).
 
 To publish new releases to the **GitHub Packages** tab under `@smmahmudiqbal`:
-1. In the GitHub repository, click **Releases** > **Draft a new release**.
-2. Create a tag (e.g., `v1.0.0`).
-3. Click **Publish release**.
-4. The workflow will automatically test and publish the package to `https://npm.pkg.github.com`!
+1. In the GitHub repository, navigate to **Releases** > **Draft a new release**.
+2. Create a version tag (e.g., `v1.0.0`).
+3. Click **Publish release** to run tests and package deployment.
 
 ---
 
-## 👤 Author & Attribution
+## Author and Attribution
 
 **Developed by S. M. Mahmud Iqbal**  
 - **GitHub:** [@SMMahmudIqbal](https://github.com/SMMahmudIqbal)  
@@ -122,6 +119,6 @@ To publish new releases to the **GitHub Packages** tab under `@smmahmudiqbal`:
 
 ---
 
-## 📄 License
+## License
 
 MIT License © 2026 S. M. Mahmud Iqbal
